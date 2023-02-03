@@ -12,3 +12,8 @@ output "result" {
   value       = random_integer.target_node.result
   description = "The random integer result."
 }
+
+output "formatted_result" {
+  value       = join(var.node_separator, [var.node_prefix, format(var.node_scale, random_integer.target_node.result)])
+  description = "The random integer result formmated with the node prefix and separator."
+}
