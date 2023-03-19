@@ -6,6 +6,7 @@ variable "test_cases" {
     node_prefix    = optional(string, "")
     node_scale     = optional(string, "%d")
     node_separator = optional(string, "-")
-    expected       = string
+
+    expected = string
   }))
 }
