@@ -14,6 +14,6 @@ output "result" {
 }
 
 output "formatted_result" {
-  value       = join(var.node_separator, [var.node_prefix, format(var.node_scale, random_integer.target_node.result)])
+  value       = join(var.separator, [var.prefix, format(var.scale, random_integer.target_node.result)])
   description = "The random integer result formmated with the node prefix and separator."
 }

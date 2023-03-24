@@ -8,19 +8,19 @@ variable "max" {
   type        = number
 }
 
-variable "node_prefix" {
+variable "prefix" {
   description = "The prefix of the PVE nodes. Defaults to empty."
   type        = string
   default     = ""
 }
 
-variable "node_scale" {
+variable "scale" {
   description = "The number of 0 (zeros) to fill in. Defaults to %d."
   type        = string
   default     = "%d"
 }
 
-variable "node_separator" {
+variable "separator" {
   description = "The separator from the node name and the random integer result. Defaults to '-'."
   type        = string
   default     = "-"
