@@ -1,17 +1,19 @@
 # terraform-random-target-node
-Repository of a Terraform module that generates random numbers that are used as the servers that will receive the new VM.
+Repository of a Terraform module that generates random numbers to select servers that will receive new VMs.
+
+## Getting Started
 
 Run these commands on the computer that is running Terraform:
 
-1. Initialize the project:
+1. **Initialize the project:**
     ```bash
     cd examples/
     terraform init
     ```
 
-1. Run one examples:
+1. **Run an example:**
 
-    Add `-auto-approve` if you want to auto approve the execution.
+    To auto-approve the execution, add `-auto-approve` to the command.
     ```bash
     ./tf.sh apply 01-bare-minimum -auto-approve
     ./tf.sh destroy 01-bare-minimum
@@ -23,18 +25,23 @@ Run these commands on the computer that is running Terraform:
     ./tf.sh apply 05-all-attributes
     ```
 
-1. Run all examples:
+1. **Run all examples:**
     ```bash
     ./run-all.sh apply
     ./run-all.sh destroy
     ```
 
-#
-### License:
+1. **Create a release to be imported into other Terraform projects:**
+    ```bash
+    git tag
+    git tag -a 1.0.6 -m "Release version 1.0.6"
+    git push --tags
+    ```
 
-[MIT](LICENSE "MIT License")
+## License
 
-#
-### Created by:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE "MIT License") file for details.
 
-1. Luciano Sampaio.
+## Created by
+
+Luciano Sampaio
