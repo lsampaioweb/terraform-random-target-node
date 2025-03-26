@@ -1,6 +1,29 @@
 # terraform-random-target-node
 Repository of a Terraform module that generates random numbers to select servers that will receive new VMs.
 
+## Terraform Registry
+
+This module is published on the official Terraform Registry:
+
+[lsampaioweb/target-node/random](https://registry.terraform.io/modules/lsampaioweb/target-node/random/latest)
+
+You can use it directly in your Terraform configuration:
+
+```hcl
+module "target_node" {
+  source  = "lsampaioweb/target-node/random"
+  version = "1.0.7"
+
+  min       = 1
+  max       = 10
+  prefix    = "pve"
+  scale     = "%d"
+  separator = "-"
+}
+```
+
+## Getting Started
+
 Run these commands on the computer that is running Terraform:
 
 1. Run an example
