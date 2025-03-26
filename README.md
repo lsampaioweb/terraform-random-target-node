@@ -33,6 +33,7 @@ Run these commands on the computer that is running Terraform:
     To auto-approve the execution, add `-auto-approve` to the command.
 
     ```bash
+    cd examples
     ./tf.sh apply 01-bare-minimum -auto-approve
     ```
 
